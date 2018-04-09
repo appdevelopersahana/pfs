@@ -263,7 +263,7 @@ text-align:center;
     border-radius: 5px;
     background-color: white;
     padding: 20px;
- margin-top:40px;
+ margin-top:0;
 text-align:center;
 }
 
@@ -675,6 +675,10 @@ li.pipe {
   transform: scale(1.01, 1);
   z-index: 0;
 }
+#h{
+    margin-right: 380px;
+    margin-left: 400px;
+}
 
 li.step.active ~ li.pipe,
 li.step.active ~ li.step {
@@ -707,6 +711,7 @@ li.step.active ~ li.step {
     .column{
         width: 50%;
     }
+    
 }
 @media only screen and (max-width: 530px){
         .preview{
@@ -719,7 +724,22 @@ li.step.active ~ li.step {
     .column{
         width: 100%;
     }
-    
+
+    .container {	
+	width:80%;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+}
+    .w3-third{
+        margin-bottom: 10px;
+    }
+    #h{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
 }
 /* Popup container - can be anything you want */
 .popup {

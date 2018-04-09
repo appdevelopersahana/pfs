@@ -124,7 +124,7 @@
 </form>
 </div>
     
-    <h2 class="packages" style="text-align:center;font-family: 'Open Sans', sans-serif;display:none;width: 500px;margin-left: auto;margin-right: auto;color: white;">Choose The Template</h2>
+    <h2 class="packages" id="h" style="font-family: 'Open Sans', sans-serif;display:none;color: white;">Choose The Template</h2>
 
 <div class="row packages" style="display:none;">
   <div class="column">       
@@ -256,7 +256,8 @@
   </form>
 </div>
      <div style="overflow:auto;" class="bcontainer" >
-    <div style="float:right;">
+   <!-- <div style="float:right;">-->
+         <div>
       <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
       <button type="button" name="submit" id="nextBtn" onclick="nextPrev(1)">Next</button>
     </div>
@@ -469,7 +470,7 @@ preSquare = thisSqure;
     event = event || window.event; // IE specials
     var target = event.target || event.srcElement; // IE specials
 
-    if(target.nodeName === "LI" || target.nodeName==="DIV" || target.className==="ic" || target.className==="w3-card w3-container popup" || target.className==="w3-third") {
+   if(target.nodeName === "LI" || target.className==="ic" || target.className==="w3-card w3-container popup" || target.className==="w3-third" || ! target.className==="row packages" || ! target.className==="bcontainer" || ! target.className==="container"  || ! target.className==="column") {
         document.getElementById("package").value=target.id;
        
     }
