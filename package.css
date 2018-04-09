@@ -833,10 +833,13 @@ li.step.active ~ li.step {
    
 
 }
-body{
+body{ height:100%;} 
+.bg{
 background-image: url(images/main-page.jpg);
     background-attachment: fixed;
     background-position:center;
     background-repeat: no-repeat;
     background-size:cover;
+	height:100%;
+	
 }
