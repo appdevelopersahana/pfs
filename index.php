@@ -40,7 +40,7 @@
     
   </ul>
 </div>
-    
+    <div class="success"><?= $success ?></div>
 <div class="container tab" >  
   <form class="contact">
     <h3 style="text-align:center;">Quick Contact</h3>
@@ -252,7 +252,7 @@
           <label for="template">Choosen Template</label>
           <img id="ct" src="images/infinite.png" width="100%;" height="100%" >
     </fieldset>
- <div class="success"><?= $success ?></div>
+ 
   </form>
 </div>
      <div style="overflow:auto;" class="bcontainer" >
@@ -315,7 +315,7 @@ function validateForm() {
   for (i = 0; i < y.length; i++) {
      
     // If a field is empty...
-    if (! patt.test(y[0].value) || ! pat.test(y[1].value) || ! ph.test(y[2].value)){
+    if (! patt.test(y[0].value) || ! pat.test(y[1].value).trim() || ! ph.test(y[2].value)){
       // add an "invalid" class to the field:
     
       // and set the current valid status to false
@@ -418,8 +418,8 @@ if( prevSquare && prevSquare != thisSquare )
 // Alter prevSquare image (if prevSquare is an <img> element)
 prevSquare.style.border="none";
 prevSquare.style.borderRadius="none";
-prevSquare.style.color="black";
-prevSquare.style.background="white";
+//prevSquare.style.color="black";
+//prevSquare.style.background="white";
 
 }
 
@@ -427,8 +427,8 @@ prevSquare.style.background="white";
 thisSquare.style.border="4px groove gold";
    thisSquare.style.borderRadius="16px";
     thisSquare.style.fontFamily="montserrat, arial, verdana";
-    thisSquare.style.backgroundImage="url(images/main-page.jpg)";
-    thisSquare.style.color="white";
+    //thisSquare.style.backgroundImage="url(images/main-page.jpg)";
+   // thisSquare.style.color="white";
      
 // Assign value to previos square
 prevSquare = thisSquare;
@@ -469,11 +469,11 @@ preSquare = thisSqure;
     event = event || window.event; // IE specials
     var target = event.target || event.srcElement; // IE specials
 
-    if(target.nodeName === "LI" || target.className==="ic" || target.className==="w3-card w3-container popup") {
+    if(target.nodeName === "LI" || target.className==="ic" || target.className==="w3-card w3-container popup" || target.className==="w3-third") {
         document.getElementById("package").value=target.id;
        
     }
-     else if(target.nodeName==="IMG" || ! target.className=="ic"){
+     else if(target.nodeName==="IMG" || ! target.className=="ic"|| ! target.nodeName==="DIV" || ! target.className==="w3-card w3-container popup" || ! target.className==="w3-third" ){
          document.getElementById("ct").src=target.src;
      }
 };
@@ -514,7 +514,7 @@ preSquare = thisSqure;
 }); 
        $(document).ready(function(){
     $("button").click(function(){
-        var email=$("#email").val();
+        var email=$.trim($("#email").val());
         var email_regex=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
    if( ! email.match(email_regex)  )
       return " Email is required";
