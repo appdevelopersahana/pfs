@@ -686,7 +686,7 @@ li.step.active ~ li.step {
 }
 .bcontainer{
        width: 400px;
-	margin: 50px auto;
+	margin:0 auto;
 	text-align: center;
 	position: relative;
 }
@@ -724,6 +724,32 @@ li.step.active ~ li.step {
     .column{
         width: 100%;
     }
+    .stages {
+    width:320px;
+    
+  }
+    li.step {
+  padding: 0px 3px;
+  
+}
+    #progressbar {
+
+	/*CSS counters to number the steps*/
+        width:100%;
+        padding-left: 3px;
+        padding-right:0;
+}
+.ucontainer{
+	
+    
+    margin-top: 20px;	
+	position: relative;
+    
+}
+    #progressbar li {
+	padding-left: 3px;
+	font-size: 10px;
+}
 
     .container {	
 	width:80%;
