@@ -1,12 +1,13 @@
 <?php 
 
 // define variables and set to empty values
-$name_error = $email_error = $phone_error = $url_error = "";
+//$name_error = $email_error = $phone_error = $url_error = "";
 $name = $email = $phone = $message = $url = $success = "";
 
 //form is submitted with POST method
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["name"])) {
+ $name = test_input($_POST["name"]);
+ /* if (empty($_POST["name"])) {
     $name_error = "Name is required";
   } else {
     $name = test_input($_POST["name"]);
@@ -14,9 +15,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
       $name_error = "Only letters and white space allowed"; 
     }
-  }
-
-  if (empty($_POST["email"])) {
+  }*/
+$email = test_input($_POST["email"]);
+ /* if (empty($_POST["email"])) {
     $email_error = "Email is required";
   } else {
     $email = test_input($_POST["email"]);
@@ -24,9 +25,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
       $email_error = "Invalid email format"; 
     }
-  }
-  
-  if (empty($_POST["phone"])) {
+  }*/
+   $phone = test_input($_POST["phone"]);
+ /* if (empty($_POST["phone"])) {
     $phone_error = "Phone is required";
   } else {
     $phone = test_input($_POST["phone"]);
@@ -34,9 +35,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!preg_match("/^(\d[\s-]?)?[\(\[\s-]{0,2}?\d{3}[\)\]\s-]{0,2}?\d{3}[\s-]?\d{4}$/i",$phone)) {
       $phone_error = "Invalid phone number"; 
     }
-  }
-
-  if (empty($_POST["package"])) {
+  }*/
+ $url = test_input($_POST["package"]);
+  /*if (empty($_POST["package"])) {
     $url_error = "";
   } else {
     $url = test_input($_POST["package"]);
@@ -47,9 +48,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = "";
   } else {
     $message = test_input($_POST["message"]);
-  }
+  }*/
   
-  if ($name_error == '' and $email_error == '' and $phone_error == '' and $url_error == '' ){
+  //if ($name_error == '' and $email_error == '' and $phone_error == '' and $url_error == '' ){
       $message_body = '';
       unset($_POST['submit']);
       foreach ($_POST as $key => $value){
@@ -58,11 +59,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       
       $to = 'bsahana12345@gmail.com';
       $subject = 'Contact Form Submit';
-      if (mail($to, $subject, $message_body)){
+      if (mail($to, $subject, $name,$email,$phone,$url){
           $success = "Message sent, thank you for contacting us!";
           $name = $email = $phone = $message = $url = '';
       }
-  }
+  //}
   
 }
 

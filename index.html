@@ -229,7 +229,7 @@
 </div>
         </div>
  <div class="container tab" style="padding: 0px;">  
-  <form class="contact" id="formsubmission" action="formValidation.php" method="post">
+  <form class="contact" id="formsubmission" action="form_process.php" method="post">
     <h3>Summary</h3>
     <fieldset>
       <input id="name1" placeholder="Your name" type="text" name="name" >
@@ -417,8 +417,8 @@ if( prevSquare && prevSquare != thisSquare )
 // Alter prevSquare image (if prevSquare is an <img> element)
 prevSquare.style.border="none";
 prevSquare.style.borderRadius="none";
-prevSquare.style.color="black";
-prevSquare.style.background="white";
+//prevSquare.style.color="black";
+//prevSquare.style.background="white";
 
 }
 
@@ -426,8 +426,8 @@ prevSquare.style.background="white";
 thisSquare.style.border="4px groove gold";
    thisSquare.style.borderRadius="16px";
     thisSquare.style.fontFamily="montserrat, arial, verdana";
-    thisSquare.style.backgroundImage="url(images/main-page.jpg)";
-    thisSquare.style.color="white";
+    //thisSquare.style.backgroundImage="url(images/main-page.jpg)";
+   // thisSquare.style.color="white";
      
 // Assign value to previos square
 prevSquare = thisSquare;
@@ -468,11 +468,11 @@ preSquare = thisSqure;
     event = event || window.event; // IE specials
     var target = event.target || event.srcElement; // IE specials
 
-    if(target.nodeName === "LI" || target.className==="ic" || target.className==="w3-card w3-container popup") {
+    if(target.nodeName === "LI" || target.className==="ic" || target.className==="w3-card w3-container popup" || target.className==="w3-third") {
         document.getElementById("package").value=target.id;
        
     }
-     else if(target.nodeName==="IMG" || ! target.className=="ic"){
+     else if(target.nodeName==="IMG" || ! target.className=="ic" || ! target.nodeName==="DIV" || ! target.className==="w3-card w3-container popup" || ! target.className==="w3-third" ){
          document.getElementById("ct").src=target.src;
      }
 };

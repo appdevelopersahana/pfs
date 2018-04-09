@@ -1,3 +1,4 @@
+<?php include('form_process.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -229,7 +230,7 @@
 </div>
         </div>
  <div class="container tab" style="padding: 0px;">  
-  <form class="contact" id="formsubmission" action="formValidation.php" method="post">
+  <form class="contact" id="formsubmission" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
     <h3>Summary</h3>
     <fieldset>
       <input id="name1" placeholder="Your name" type="text" name="name" >
@@ -251,13 +252,13 @@
           <label for="template">Choosen Template</label>
           <img id="ct" src="images/infinite.png" width="100%;" height="100%" >
     </fieldset>
- 
+ <div class="success"><?= $success ?></div>
   </form>
 </div>
      <div style="overflow:auto;" class="bcontainer" >
     <div style="float:right;">
       <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+      <button type="button" name="submit" id="nextBtn" onclick="nextPrev(1)">Next</button>
     </div>
   </div>
     <script>
