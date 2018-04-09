@@ -59,46 +59,46 @@
   </form>
 </div>
  
-<div class="w3-row-padding w3-center w3-margin-top container1 tab">
-    <h2>Choose one package</h2>
-<div class="w3-third" >
-  <div class="w3-card w3-container popup" id="silverPackage" style="min-height:460px;" onclick='swapImage( this );'>
-      <span class="popuptext" id="silverPopup" >You chosen Silver plan.</span>
-  <h3 style="font-family: montserrat, arial, verdana;">SILVER</h3><br>
-  <i class="w3-margin-bottom w3-text-theme" style="font-size:120px"><img class="ic" id="silverPackage" src="images/silver.jpg" width="30%"></i>
-<ul style="list-style-type: circle;">  
-<p><li id="silverPackage" >Lorem ipsum dolor sit amet</li></p>
-<p><li id="silverPackage" >Consectetur adipiscing elit</li></p>
-<p><li id="silverPackage" >Lorem ipsum dolor sit amet</li></p>
- <p><li id="silverPackage" >Consectetur adipiscing elit</li></p>
+<div class="w3-row-padding w3-center w3-margin-top container1 tab" id="Silver Package">
+    <h2 >Choose one package</h2>
+<div class="w3-third" id="Silver Package" >
+  <div class="w3-card w3-container popup" id="Silver Package" style="min-height:460px;" onclick='swapImage( this );'>
+     <!-- <span class="popuptext" id="silverPopup" >You chosen Silver plan.</span>-->
+  <h3 style="font-family: montserrat, arial, verdana;" id="Silver Package">SILVER</h3><br>
+  <i class="w3-margin-bottom w3-text-theme" style="font-size:120px"><img class="ic" id="Silver Package" src="images/silver.jpg" width="30%"></i>
+<ul id="Silver Package" style="list-style-type: circle;">  
+<p><li id="Silver Package" >Lorem ipsum dolor sit amet</li></p>
+<p><li id="Silver Package" >Consectetur adipiscing elit</li></p>
+<p><li id="Silver Package" >Lorem ipsum dolor sit amet</li></p>
+ <p><li id="Silver Package" >Consectetur adipiscing elit</li></p>
 </ul>
   </div>
 </div>
 
-<div class="w3-third">
-  <div class="w3-card w3-container popup" style="min-height:460px;font-family: montserrat, arial, verdana;" id="goldPackage" onclick='swapImage( this );' >
-      <span class="popuptext" id="goldPopup" >You Chosen Gold plan.</span>
-  <h3 style="font-family: montserrat, arial, verdana;">GOLD</h3><br>
-  <i class="w3-margin-bottom w3-text-theme" style="font-size:120px"><img class="ic" id="goldPackage" src="images/gold.jpg" width="30%"></i>
-<ul style="list-style-type: circle;">  
-<p><li id="goldPackage">Lorem ipsum dolor sit amet</li></p>
-<p><li id="goldPackage">Consectetur adipiscing elit</li></p>
-<p><li id="goldPackage">Lorem ipsum dolor sit amet</li></p>
- <p><li id="goldPackage">Consectetur adipiscing elit</li></p>
+<div class="w3-third" id="Gold Package">
+  <div class="w3-card w3-container popup" style="min-height:460px;font-family: montserrat, arial, verdana;" id="Gold Package" onclick='swapImage( this );'  >
+      <!--<span class="popuptext" id="goldPopup" >You Chosen Gold plan.</span>-->
+  <h3 id="Gold Package" style="font-family: montserrat, arial, verdana;">GOLD</h3><br>
+  <i class="w3-margin-bottom w3-text-theme" style="font-size:120px"><img class="ic" id="Gold Package" src="images/gold.jpg" width="30%"></i>
+<ul id="Gold Package" style="list-style-type: circle;">  
+<p><li id="Gold Package">Lorem ipsum dolor sit amet</li></p>
+<p><li id="Gold Package">Consectetur adipiscing elit</li></p>
+<p><li id="Gold Package">Lorem ipsum dolor sit amet</li></p>
+ <p><li id="Gold Package">Consectetur adipiscing elit</li></p>
 </ul>
   </div>
 </div>
 
-<div class="w3-third">
-  <div class="w3-card w3-container popup" style="min-height:460px;font-family: montserrat, arial, verdana;" id="platinumPackage" onclick='swapImage( this );'>
-      <span class="popuptext" id="platinumPopup">You Chosen Platinum plan.</span>
-  <h3 style="font-family: montserrat, arial, verdana;">PLATINUM</h3><br>
-  <i class="w3-margin-bottom w3-text-theme" style="font-size:120px"><img class="ic" id="platinumPackage" src="images/platinum-level.png" width="30%"></i>
-<ul style="list-style-type: circle;">  
-<p><li id="platinumPackage">Lorem ipsum dolor sit amet</li></p>
-<p><li id="platinumPackage">Consectetur adipiscing elit</li></p>
-<p><li id="platinumPackage">Lorem ipsum dolor sit amet</li></p>
- <p><li id="platinumPackage">Consectetur adipiscing elit</li></p>
+<div class="w3-third" id="Platinum Package" >
+  <div class="w3-card w3-container popup" style="min-height:460px;font-family: montserrat, arial, verdana;" id="Platinum Package" onclick='swapImage( this );'>
+    <!--  <span class="popuptext" id="platinumPopup">You Chosen Platinum plan.</span>-->
+  <h3 style="font-family: montserrat, arial, verdana;" id="Platinum Package" >PLATINUM</h3><br>
+  <i class="w3-margin-bottom w3-text-theme" style="font-size:120px"><img class="ic" id="Platinum Package" src="images/platinum-level.png" width="30%"></i>
+<ul id="Platinum Package" style="list-style-type: circle;">  
+<p><li id="Platinum Package">Lorem ipsum dolor sit amet</li></p>
+<p><li id="Platinum Package">Consectetur adipiscing elit</li></p>
+<p><li id="Platinum Package">Lorem ipsum dolor sit amet</li></p>
+ <p><li id="Platinum Package">Consectetur adipiscing elit</li></p>
 </ul>
   </div>
 </div>
@@ -243,7 +243,7 @@
              
     </fieldset>
       <fieldset>
-      <input id="package" placeholder="Your selected package" type="text" name="package">
+      <input id="package" placeholder="Your selected package" type="text" name="package" readonly>
              
     </fieldset>
        
@@ -423,7 +423,7 @@ prevSquare.style.background="white";
 }
 
 // Alter thisSquare to your active image
-thisSquare.style.border="4px groove white";
+thisSquare.style.border="4px groove gold";
    thisSquare.style.borderRadius="16px";
     thisSquare.style.fontFamily="montserrat, arial, verdana";
     thisSquare.style.backgroundImage="url(images/main-page.jpg)";
@@ -468,7 +468,7 @@ preSquare = thisSqure;
     event = event || window.event; // IE specials
     var target = event.target || event.srcElement; // IE specials
 
-    if(target.nodeName === "DIV" || target.nodeName === "LI" || target.className==="ic") {
+    if(target.nodeName === "LI" || target.className==="ic" || target.className==="w3-card w3-container popup") {
         document.getElementById("package").value=target.id;
        
     }
