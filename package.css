@@ -605,12 +605,12 @@ select{
   background-color: #bbbbbb;
 }
 
- /*Make circles that indicate the steps of the form: 
+ /*Make circles that indicate the steps of the form: */
 .step {
-  height: 35px;
-  width: 35px;
+  height: 30px;
+  width: 30px;
   opacity: 0.5;
-}*/
+}
 
 .step.active {
   opacity: 1;
@@ -677,8 +677,8 @@ li.pipe {
   z-index: 0;
 }
 #h{
-    margin-right:500px;
-    margin-left: 500px;
+    margin-right:350px;
+    margin-left: 400px;
 }
 
 li.step.active ~ li.pipe,
