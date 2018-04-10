@@ -503,12 +503,12 @@ select{
 }
 /* Add a background color and some padding around the form */
 
-#myVideo {
+/*#myVideo {
     position: fixed;
     top:0;
     min-width: 100%; 
     min-height: 100%;
-}
+}*/
 .container3 {
     display: block;
     position: relative;
