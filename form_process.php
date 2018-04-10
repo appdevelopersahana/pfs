@@ -58,8 +58,14 @@ $email = test_input($_POST["email"]);
       }
       
       $to = 'bsahana12345@gmail.com';
+    $to1='sivakartik.mk@gmail.com';
       $subject = 'Contact Form Submit';
-      if (mail($to, $subject, $name,$email,$phone,$url){
+    $subject2= "Copy of your submisson.We'll get you shortly!";
+      if (mail($to, $subject, $name,$email,$phone,$url)){
+          $success = "Message sent, thank you for contacting us!";
+          $name = $email = $phone = $message = $url = '';
+      }
+                if (mail($to1, $subject, $name,$email,$phone,$url){
           $success = "Message sent, thank you for contacting us!";
           $name = $email = $phone = $message = $url = '';
       }
