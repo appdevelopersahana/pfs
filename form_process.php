@@ -7,7 +7,7 @@ $name = $email = $phone = $message = $url = $success = "";
 //form is submitted with POST method
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
  $name = test_input($_POST["name"]);
- /* if (empty($_POST["name"])) {
+ /*if (empty($_POST["name"])) {
     $name_error = "Name is required";
   } else {
     $name = test_input($_POST["name"]);
@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
   }*/
 $email = test_input($_POST["email"]);
- /* if (empty($_POST["email"])) {
+ /*if (empty($_POST["email"])) {
     $email_error = "Email is required";
   } else {
     $email = test_input($_POST["email"]);
@@ -27,7 +27,7 @@ $email = test_input($_POST["email"]);
     }
   }*/
    $phone = test_input($_POST["phone"]);
- /* if (empty($_POST["phone"])) {
+  /*if (empty($_POST["phone"])) {
     $phone_error = "Phone is required";
   } else {
     $phone = test_input($_POST["phone"]);
@@ -57,19 +57,18 @@ $email = test_input($_POST["email"]);
           $message_body .=  "$key: $value\n";
       }
       
-      $to = 'bsahana12345@gmail.com';
-    $to1='sivakartik.mk@gmail.com';
+      $to = 'sahana.b@inspiringwave.in,kartik@inspiringwave.in';
       $subject = 'Contact Form Submit';
-    $subject2= "Copy of your submisson.We'll get you shortly!";
-      if (mail($to, $subject, $name,$email,$phone,$url)){
+      $subjec= 'This is the Copy of your submisson.We will get you shortly';
+      $headers=$email;
+      if (mail($to, $subject,$message_body)){
           $success = "Message sent, thank you for contacting us!";
           $name = $email = $phone = $message = $url = '';
       }
-                if (mail($to1, $subject, $name,$email,$phone,$url){
-          $success = "Message sent, thank you for contacting us!";
-          $name = $email = $phone = $message = $url = '';
+      if(mail($headers , $subjec , $message_body)){
+            $name = $email = $phone = $message = $url = '';
       }
-  //}
+       // }
   
 }
 
@@ -79,3 +78,4 @@ function test_input($data) {
   $data = htmlspecialchars($data);
   return $data;
 }
+?>
