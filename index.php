@@ -42,7 +42,7 @@
 </div>
     <div class="success"><?= $success ?></div>
 <div class="container tab" >  
-  <form class="contact" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
+  <form class="contact">
     <h3 style="text-align:center;">Quick Contact</h3>
     <h4 style="text-align:center;">Contact us today!</h4>
     <fieldset>
