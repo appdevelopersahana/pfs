@@ -41,7 +41,7 @@
 </div>
     
 <div class="container tab" >  
-  <form class="contact">
+  <form class="contact" id="before" target="fname" action="form_without_submit.php" method="post">
     <h3 style="text-align:center;">Quick Contact</h3>
     <h4 style="text-align:center;">Contact us today!</h4>
     <fieldset>
@@ -58,7 +58,7 @@
     </fieldset>       
   </form>
 </div>
- 
+ <iframe name="fname" width="0" height="0" style="display: none;"></iframe>
 <div class="w3-row-padding w3-center w3-margin-top container1 tab" id="Silver Package">
     <h2 >Choose one package</h2>
 <div class="w3-third" id="Silver Package" >
@@ -325,6 +325,7 @@ function validateForm() {
   // If the valid status is true, mark the step as finished and valid:
   if (valid) {
     document.getElementsByClassName("step")[currentTab].className += " finish";
+      document.getElementById("before").submit();
   }
   return valid; // return the valid status
 }
